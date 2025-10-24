@@ -53,3 +53,15 @@ int	ft_strcmp(const char *s1, const char *s2)
 	}
 	return (0);
 }
+
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
