@@ -14,7 +14,9 @@
 
 int	is_number(char *str)
 {
-	int i = 0;
+	int	i;
+
+	i = 0;
 	if (str[i] == '-' || str[i] == '+')
 		i++;
 	if (!str[i])
@@ -30,8 +32,10 @@ int	is_number(char *str)
 
 int	is_duplicate(char **av)
 {
-	int i = 0;
+	int i;
 	int j;
+
+	i = 0;
 	while (av[i])
 	{
 		j = i + 1;
@@ -49,7 +53,9 @@ int	is_duplicate(char **av)
 int	arg_check(char **av, int ac)
 {
 	long num;
-	int i = 1;
+	int i;
+
+	i = 1;
 	if (is_duplicate(av))
 		return (0);
 	while (i < ac)
