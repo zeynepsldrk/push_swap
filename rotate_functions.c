@@ -27,7 +27,7 @@ void	ra(int stack_a[], int index_a)
 		i--;
 	}
 	stack_a[0] = temp;
-	write(1, "rra\n", 4);
+	write(1, "ra\n", 3);
 }
 
 void	rb(int stack_b[], int index_b)
@@ -45,12 +45,12 @@ void	rb(int stack_b[], int index_b)
 		i--;
 	}
 	stack_b[0] = temp;
-	write(1, "rrb\n", 4);
+	write(1, "rb\n", 3);
 }
 
 void	rr(int stack_a[], int stack_b[], int index_a, int index_b)
 {
 	rra(stack_a, index_a);
 	rra(stack_b, index_b);
-	write(1, "rrr\n", 4);
+	write(1, "rr\n", 3);
 }
