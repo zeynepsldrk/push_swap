@@ -23,7 +23,7 @@ void	rra(int stack_a[], int index_a)
 	i = index_a;
 	while (i >= 0)
 	{
-		stack_a[i] = stack_a[i - 1];
+		stack_a[i + 1] = stack_a[i];
 		i--;
 	}
 	stack_a[0] = temp;
@@ -41,7 +41,7 @@ void	rrb(int stack_b[], int index_b)
 	i = index_b;
 	while (i >= 0)
 	{
-		stack_b[i] = stack_b[i - 1];
+		stack_b[i + 1] = stack_b[i];
 		i--;
 	}
 	stack_b[0] = temp;

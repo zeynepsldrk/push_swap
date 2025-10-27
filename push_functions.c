@@ -18,6 +18,7 @@ void pa(int stack_a[], int stack_b[], int index_a, int index_b)
         return ;
     stack_a[index_a + 1] = stack_b[index_b];
     stack_b[index_b] = 0;
+    write(1, "pa\n", 3);
 }
 
 void pb(int stack_a[], int stack_b[], int index_a, int index_b)
@@ -26,4 +27,5 @@ void pb(int stack_a[], int stack_b[], int index_a, int index_b)
         return ;
     stack_b[index_b + 1] = stack_a[index_a];
     stack_a[index_a] = 0;
+    write(1, "pb\n", 3);
 }
