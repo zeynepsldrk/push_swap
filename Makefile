@@ -1,4 +1,4 @@
-SRCS	= main.c
+SRCS	= main.c error_check.c ft_split.c push_functions.c reverse_rotate_func.c rotate_functions.c swap_functions.c utils.c
 
 OBJS	= $(SRCS:.c=.o)
 

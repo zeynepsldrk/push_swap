@@ -70,9 +70,7 @@ int main(int ac, char **av)
 	else if (ac == 2)
 	{
 		char	**slice_arg;
-		int		i;
-
-		i = 0;
+        
 		slice_arg = ft_split(av[1], ' ');
 		if (!arg_check(slice_arg, ft_strlen(*slice_arg)))
 			print_error();

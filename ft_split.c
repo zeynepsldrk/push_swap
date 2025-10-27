@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-int	ft_word_count(char const *s, char c)
+static ft_word_count(char const *s, char c)
 {
 	int	count;
 	int	i;
