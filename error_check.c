@@ -35,7 +35,7 @@ int	is_duplicate(char **av)
 	int i;
 	int j;
 
-	i = 0;
+	i = 1;
 	while (av[i])
 	{
 		j = i + 1;
