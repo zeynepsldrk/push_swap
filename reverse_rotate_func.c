@@ -6,7 +6,7 @@
 /*   By: zedurak <zedurak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 15:58:44 by zedurak           #+#    #+#             */
-/*   Updated: 2025/10/26 20:17:59 by zedurak          ###   ########.fr       */
+/*   Updated: 2025/10/28 18:41:10 by zedurak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ void	rra(int stack_a[], int index_a)
 
 	if (index_a <= 0)
 		return ;
-	temp = stack_a[index_a];
+	temp = stack_a[0];
 	i = index_a;
 	while (i >= 0)
 	{
-		stack_a[i + 1] = stack_a[i];
-		i--;
+		stack_a[i] = stack_a[i + 1];
+		i++;
 	}
-	stack_a[0] = temp;
+	stack_a[index_a] = temp;
 	write(1, "rra\n", 4);
 }
 
@@ -37,14 +37,14 @@ void	rrb(int stack_b[], int index_b)
 
 	if (index_b <= 0)
 		return ;
-	temp = stack_b[index_b];
+	temp = stack_b[0];
 	i = index_b;
 	while (i >= 0)
 	{
-		stack_b[i + 1] = stack_b[i];
-		i--;
+		stack_b[i] = stack_b[i + 1];
+		i++;
 	}
-	stack_b[0] = temp;
+	stack_b[index_b] = temp;
 	write(1, "rrb\n", 4);
 }
 

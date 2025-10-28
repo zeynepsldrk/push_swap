@@ -6,7 +6,7 @@
 /*   By: zedurak <zedurak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 21:05:59 by zedurak           #+#    #+#             */
-/*   Updated: 2025/10/26 15:46:54 by zedurak          ###   ########.fr       */
+/*   Updated: 2025/10/28 19:37:50 by zedurak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ int	is_number(char *str)
 
 int	is_duplicate(char **av)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 1;
 	while (av[i])
@@ -52,8 +52,8 @@ int	is_duplicate(char **av)
 
 int	arg_check(char **av, int ac)
 {
-	long num;
-	int i;
+	long	num;
+	int		i;
 
 	i = 1;
 	if (is_duplicate(av))
