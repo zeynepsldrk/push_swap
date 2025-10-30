@@ -6,7 +6,7 @@
 /*   By: zedurak <zedurak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 17:26:56 by zedurak           #+#    #+#             */
-/*   Updated: 2025/10/28 19:39:34 by zedurak          ###   ########.fr       */
+/*   Updated: 2025/10/30 19:55:20 by zedurak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,11 @@ void	start_push_swap(char **av, int ac)
 	if (ac - 1 == 2)
 		two_elements_sorting(stack_a, index_a);
 	else if (ac - 1 == 3)
-		three_elements_sorting(stack_a, index_a, stack_b, index_b);
+		three_elements_sorting(stack_a, index_a);
 	else if (ac - 1 == 4)
 		four_elements_sorting(stack_a, stack_b, index_a, index_b);
-	else if (ac - 1 == 5)
-		five_elements_sorting(stack_a, stack_b, index_a, index_b);
+	else if ((ac - 1 >= 5) && (ac - 1 <= 10))
+		small_elements_sorting(stack_a, stack_b, index_a, index_b);
 	else
 		boss_sorting(stack_a, stack_b, index_a, index_b);
 }
