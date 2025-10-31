@@ -6,11 +6,33 @@
 /*   By: zedurak <zedurak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 17:42:01 by zedurak           #+#    #+#             */
-/*   Updated: 2025/10/23 21:57:31 by zedurak          ###   ########.fr       */
+/*   Updated: 2025/10/31 16:18:45 by zedurak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	char	*newstr;
+	size_t	s1len;
+	size_t	s2len;
+
+	if (!s1 || !s2)
+	{
+		return (NULL);
+	}
+	s1len = ft_strlen(s1);
+	s2len = ft_strlen(s2);
+	newstr = (char *)malloc((s1len + s2len + 1) * sizeof(char));
+	if (!newstr)
+	{
+		return (NULL);
+	}
+	ft_strlcpy(newstr, s1, s1len + 1);
+	ft_strlcat(newstr, s2, s1len + s2len + 1);
+	return (newstr);
+}
 
 int	ft_atoi(const char *str)
 {
@@ -38,6 +60,28 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (sign * result);
+}
+
+char	*ft_strdup(const char *s)
+{
+	int		len;
+	size_t	i;
+	char	*a;
+
+	len = ft_strlen(s);
+	i = 0;
+	if (!s)
+		return (NULL);
+	a = (char *)malloc((len + 1) * (sizeof(char)));
+	if (!a)
+		return (NULL);
+	while (s[i])
+	{
+		a[i] = s[i];
+		i++;
+	}
+	a[i] = '\0';
+	return (a);
 }
 
 int	ft_strcmp(const char *s1, const char *s2)

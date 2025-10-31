@@ -6,19 +6,19 @@
 /*   By: zedurak <zedurak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 14:54:56 by zedurak           #+#    #+#             */
-/*   Updated: 2025/10/30 20:57:46 by zedurak          ###   ########.fr       */
+/*   Updated: 2025/10/31 15:15:10 by zedurak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	two_elements_sorting(int stack_a[], int index_a)
+void	two_elements_sorting(int *stack_a, int index_a)
 {
 	if (stack_a[index_a] > stack_a[index_a - 1])
 		sa(stack_a, index_a);
 }
 
-void	three_elements_sorting(int stack_a[], int index_a)
+void	three_elements_sorting(int *stack_a, int index_a)
 {
 	int	top;
 	int	second;
@@ -45,7 +45,7 @@ void	three_elements_sorting(int stack_a[], int index_a)
 	}
 }
 
-void	four_elements_sorting(int stack_a[], int stack_b[], int index_a, int index_b)
+void	four_elements_sorting(int *stack_a, int *stack_b, int index_a, int index_b)
 {
 	int	min_pos;
 
@@ -59,7 +59,7 @@ void	four_elements_sorting(int stack_a[], int stack_b[], int index_a, int index_
 	}
 }
 
-void	small_elements_sorting(int stack_a[], int stack_b[], int index_a, int index_b)
+void	small_elements_sorting(int *stack_a, int *stack_b, int index_a, int index_b)
 {
 	int	min_pos;
 	int	move_elements_count;

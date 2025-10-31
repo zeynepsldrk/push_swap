@@ -6,13 +6,13 @@
 /*   By: zedurak <zedurak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 15:58:45 by zedurak           #+#    #+#             */
-/*   Updated: 2025/10/26 15:58:46 by zedurak          ###   ########.fr       */
+/*   Updated: 2025/10/31 15:16:52 by zedurak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ra(int stack_a[], int index_a)
+void	ra(int *stack_a, int index_a)
 {
 	int	temp;
 	int	i;
@@ -30,7 +30,7 @@ void	ra(int stack_a[], int index_a)
 	write(1, "ra\n", 3);
 }
 
-void	rb(int stack_b[], int index_b)
+void	rb(int *stack_b, int index_b)
 {
 	int	temp;
 	int	i;
@@ -48,7 +48,7 @@ void	rb(int stack_b[], int index_b)
 	write(1, "rb\n", 3);
 }
 
-void	rr(int stack_a[], int stack_b[], int index_a, int index_b)
+void	rr(int *stack_a, int *stack_b, int index_a, int index_b)
 {
 	rra(stack_a, index_a);
 	rra(stack_b, index_b);

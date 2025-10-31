@@ -1,31 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_functions.c                                   :+:      :+:    :+:   */
+/*   main_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zedurak <zedurak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/26 15:58:40 by zedurak           #+#    #+#             */
-/*   Updated: 2025/10/31 15:15:26 by zedurak          ###   ########.fr       */
+/*   Created: 2025/10/31 15:08:21 by zedurak           #+#    #+#             */
+/*   Updated: 2025/10/31 15:56:56 by zedurak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pa(int *stack_a, int *stack_b, int index_a, int index_b)
+int	is_sorted(int *stack_a, int size)
 {
-	if (index_b == -1)
-		return ;
-	stack_a[index_a + 1] = stack_b[index_b];
-	stack_b[index_b] = 0;
-	write(1, "pa\n", 3);
+	while (size > 0)
+	{
+		if (!(stack_a[size] < stack_a[size - 1]))
+			return (0);
+		size--;
+	}
+	return (1);
 }
 
-void	pb(int *stack_a, int *stack_b, int index_a, int index_b)
+void	fill_stack_a(int *stack_a, char **av, int ac)
 {
-	if (index_a == -1)
-		return ;
-	stack_b[index_b + 1] = stack_a[index_a];
-	stack_a[index_a] = 0;
-	write(1, "pb\n", 3);
+	int	i;
+	int	len;
+
+	i = 0;
+	len = ac - 1;
+	while (i < len)
+	{
+		stack_a[i] = *av[ac - 1];
+		ac--;
+		i++;
+	}
 }
+
+void	open_heap(int ac, int *stack_a_or_b)
+{
+	stack_a_or_b = (int *)malloc(ac * sizeof(int));
+	if (!stack_a_or_b)
+		return (0);
+}
+

@@ -6,13 +6,13 @@
 /*   By: zedurak <zedurak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 18:00:26 by zedurak           #+#    #+#             */
-/*   Updated: 2025/10/30 21:13:30 by zedurak          ###   ########.fr       */
+/*   Updated: 2025/10/31 15:20:54 by zedurak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	boss_sorting(int stack_a[], int stack_b[], int index_a, int index_b)
+void	boss_sorting(int *stack_a, int *stack_b, int index_a, int index_b)
 {
 	
 }

@@ -6,7 +6,7 @@
 /*   By: zedurak <zedurak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 21:05:59 by zedurak           #+#    #+#             */
-/*   Updated: 2025/10/28 19:37:50 by zedurak          ###   ########.fr       */
+/*   Updated: 2025/10/31 16:33:38 by zedurak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,4 +74,14 @@ void	print_error()
 {
 	write(2, "Error\n", 6);
 	exit (1);
+}
+
+void	free_all_arg_staff(char **args)
+{
+	int	i;
+
+	i = 0;
+	while (args[i])
+		free(args[i++]);
+	free(args);
 }
