@@ -6,7 +6,7 @@
 /*   By: zedurak <zedurak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 17:26:56 by zedurak           #+#    #+#             */
-/*   Updated: 2025/11/01 14:03:30 by zedurak          ###   ########.fr       */
+/*   Updated: 2025/11/01 14:34:20 by zedurak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ void	start_push_swap(char **av, int ac)
 	int	*stack_a;
 	int	*stack_b;
 
+	stack_a = NULL;
+	stack_b = NULL;
 	open_heap(ac, stack_a);
 	open_heap(ac, stack_b);
 	fill_stack_a(stack_a, av, ac);
@@ -56,11 +58,11 @@ void	organize_arg(int ac, char **av, char *joined, char *temp)
 		temp = ft_strjoin(joined, " ");
 		free(joined);
 		if (!temp)
-			return (NULL);
+			return ;
 		joined = ft_strjoin(temp, av[i]);
 		free(temp);
 		if (!joined)
-			return (NULL);
+			return ;
 		i++;
 	}
 }
@@ -71,6 +73,7 @@ char	**merge_arg(char **av, int ac)
 	char	*temp;
 	char	*joined;
 
+	temp = NULL;
 	joined = ft_strdup("");
 	if (!joined)
 		return (NULL);
