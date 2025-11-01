@@ -6,7 +6,7 @@
 /*   By: zedurak <zedurak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 17:26:56 by zedurak           #+#    #+#             */
-/*   Updated: 2025/10/31 17:41:06 by zedurak          ###   ########.fr       */
+/*   Updated: 2025/11/01 12:39:15 by zedurak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@ void	start_push_swap(char **av, int ac)
 	if (is_sorted(stack_a, ac - 1))
 		return ;
 	go_sort(ac, stack_a, stack_b);
+	free(stack_a);
+	free(stack_b);
 }
 
 void	organize_arg(int ac, char **av, char *joined, char *temp)
@@ -88,7 +90,7 @@ int	main(int ac, char **av)
 		if ((!slice_arg) || !arg_check(slice_arg, ft_strlen(*slice_arg)))
 			print_error();
 		else
-			start_push_swap(av, ac);
+			start_push_swap(slice_arg, ft_strlen(*slice_arg));
 		free_all_arg_staff(slice_arg);
 	}
 	else

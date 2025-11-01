@@ -6,7 +6,7 @@
 /*   By: zedurak <zedurak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 18:26:01 by zedurak           #+#    #+#             */
-/*   Updated: 2025/10/31 15:22:30 by zedurak          ###   ########.fr       */
+/*   Updated: 2025/11/01 12:30:14 by zedurak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,5 @@ void	index_stack(int *stack_a, int index_a)
 		stack_a[i] = rank;
 		i++;
 	}
+	free(copy);
 }
