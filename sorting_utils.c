@@ -6,7 +6,7 @@
 /*   By: zedurak <zedurak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 18:26:01 by zedurak           #+#    #+#             */
-/*   Updated: 2025/11/01 12:30:14 by zedurak          ###   ########.fr       */
+/*   Updated: 2025/11/01 13:07:46 by zedurak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,34 @@ void	index_stack(int *stack_a, int index_a)
 		i++;
 	}
 	free(copy);
+}
+
+int	find_max_bit(int *stack_a, int index_a)
+{
+	int max_rank;
+	int	max_bit;
+
+	max_bit = 0;
+	max_rank = find_max_rank(stack_a, index_a);
+	while (max_rank > 0)
+	{
+		max_rank = max_rank >> 1;
+		max_bit++;
+	}
+	return (max_bit);
+}
+
+int	find_max_rank(int *stack_a, int index_a)
+{
+	int	i;
+	int	max_rank;
+
+	i = 0;
+	while (i <= index_a)
+	{
+		if (stack_a[i] > max_rank)
+			max_rank = stack_a[i];
+		i++;
+	}
+	return (max_rank);
 }
