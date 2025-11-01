@@ -6,7 +6,7 @@
 /*   By: zedurak <zedurak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 21:05:59 by zedurak           #+#    #+#             */
-/*   Updated: 2025/10/31 16:33:38 by zedurak          ###   ########.fr       */
+/*   Updated: 2025/11/01 13:47:05 by zedurak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int	arg_check(char **av, int ac)
 	return (1);
 }
 
-void	print_error()
+void	print_error(void)
 {
 	write(2, "Error\n", 6);
 	exit (1);

@@ -6,13 +6,13 @@
 /*   By: zedurak <zedurak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 15:58:27 by zedurak           #+#    #+#             */
-/*   Updated: 2025/10/26 15:58:30 by zedurak          ###   ########.fr       */
+/*   Updated: 2025/11/01 14:05:57 by zedurak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static ft_word_count(char const *s, char c)
+static int	ft_word_count(char const *s, char c)
 {
 	int	count;
 	int	i;

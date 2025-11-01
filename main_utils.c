@@ -6,7 +6,7 @@
 /*   By: zedurak <zedurak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 15:08:21 by zedurak           #+#    #+#             */
-/*   Updated: 2025/10/31 15:56:56 by zedurak          ###   ########.fr       */
+/*   Updated: 2025/11/01 14:02:31 by zedurak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,3 @@ void	open_heap(int ac, int *stack_a_or_b)
 	if (!stack_a_or_b)
 		return (0);
 }
-

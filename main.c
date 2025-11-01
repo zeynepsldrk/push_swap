@@ -6,7 +6,7 @@
 /*   By: zedurak <zedurak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 17:26:56 by zedurak           #+#    #+#             */
-/*   Updated: 2025/11/01 13:30:11 by zedurak          ###   ########.fr       */
+/*   Updated: 2025/11/01 14:03:30 by zedurak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	organize_arg(int ac, char **av, char *joined, char *temp)
 {
 	int	i;
 
-	i  = 1;
+	i = 1;
 	while (i < ac)
 	{
 		temp = ft_strjoin(joined, " ");
@@ -82,10 +82,10 @@ char	**merge_arg(char **av, int ac)
 
 int	main(int ac, char **av)
 {
+	char	**slice_arg;
+
 	if (ac >= 2)
 	{
-		char	**slice_arg;
-
 		slice_arg = merge_arg(av, ac);
 		if ((!slice_arg) || !arg_check(slice_arg, ft_strlen(*slice_arg)))
 			print_error();
